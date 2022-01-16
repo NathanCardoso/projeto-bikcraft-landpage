@@ -28,12 +28,14 @@ h1, h3, p, a {
     --wave: url("../img/onda-clara.svg");
 }
 
-:root {
-    --color-background-1: #111;
-    --color-background-2: #000;
-    --color-text: #fff;
-    --color-benefits: rgba(255, 255, 255, 0.2);
-    --wave: url("../img/onda-escura.svg");
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-background-1: #111;
+        --color-background-2: #000;
+        --color-text: #fff;
+        --color-benefits: rgba(255, 255, 255, 0.2);
+        --wave: url("../img/onda-escura.svg");
+    }
 }
 
 /*HEADER*/
