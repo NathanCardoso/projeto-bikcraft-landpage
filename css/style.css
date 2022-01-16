@@ -24,20 +24,22 @@ h1, h3, p, a {
     --color-background-1: #f7f7f7;
     --color-background-2: #fff;
     --color-text: #000;
+    --color-button: #fff;
     --color-benefits: rgba(0, 0, 0, 0.2);
     --wave: url("../img/onda-clara.svg");
 }
 
 /*MODO DARK*/
-@media (prefers-color-scheme:dark) {
+/* @media (prefers-color-scheme:dark) {
     :root {
         --color-background-1: #111;
         --color-background-2: #000;
         --color-text: #fff;
+        --color-button: #fff;
         --color-benefits: rgba(255, 255, 255, 0.2);
         --wave: url("../img/onda-escura.svg");
     }
-}
+} */
 
 /*HEADER*/
 .header {
@@ -128,7 +130,7 @@ h1, h3, p, a {
     text-decoration: none;
     text-transform: uppercase;
     background: var(--color-primary);
-    color: var(--color-text);
+    color: var(--color-button);
     cursor: pointer;
 }
 
