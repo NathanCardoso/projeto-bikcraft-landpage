@@ -28,6 +28,7 @@ h1, h3, p, a {
     --wave: url("../img/onda-clara.svg");
 }
 
+/*MODO DARK*/
 @media (prefers-color-scheme:dark) {
     :root {
         --color-background-1: #111;
