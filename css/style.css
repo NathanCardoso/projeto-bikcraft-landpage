@@ -1,0 +1,228 @@
+/*Estilos Gerais*/
+body {
+    background: #f7f7f7;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3, p, a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*HEADER*/
+.header {
+    display: grid;
+}
+
+.header h1 {
+    margin: 3.75rem auto;
+    font-weight: bold;
+}
+
+.header .menu {
+    display: flex;
+    justify-content: center;
+}
+
+.header .menu nav ul {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header .menu nav ul li {
+    display: inline-block;
+    padding: 0.9375rem 1.875rem;
+    text-transform: uppercase;
+    background: white;
+    border-radius: 0.25rem;
+    border: 0.125rem solid white;
+    cursor: pointer;
+}
+
+.header .menu nav ul li:hover {
+    border: 0.125rem solid #900;
+}
+
+.header .menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*DESCRIPTION*/
+.description {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.description::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8%;
+    right: 50%;
+    transform: translateX(50%);
+    background: #ee2211;
+    width: 50px;
+    height: 4px;
+}
+
+.description .desc {
+    background: white;
+    display: grid;
+    justify-items: end;
+    align-content: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
+}
+
+.description .desc h1 {
+    font-weight: bold;
+}
+
+.description .desc p {
+    font-size: 1.25rem;
+    text-align: end;
+}
+
+.description .desc button {
+    padding: 0.9375rem 1.875rem;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #ee2211;
+    color: white;
+    cursor: pointer;
+}
+
+.description .desc button:hover {
+    background: #900;
+}
+
+.description .image img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+
+/*BENEFITS-SPECIFICATION*/
+.benefits-specification {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.benefits-specification .benefits {
+    display: grid;
+    align-content: stretch;
+    align-items: center;
+    justify-items: end;
+    padding: 2.5rem;
+    text-transform: uppercase;
+    font-size: 2.625rem;
+    text-align: end;
+    color: #c6c6c6;
+    background-image: url('/img/onda.svg');
+}
+
+.benefits-specification .specification {
+    background: white;
+}
+
+.benefits-specification .spec {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    background: white;
+    padding: 2.5rem 2.5rem 2.5rem;
+}
+
+.benefits-specification .specification .spec {
+    border-left: 2px solid white;
+    
+}
+.benefits-specification .specification .spec:hover {
+    background: #f7f7f7;
+    border-left: 2px solid #900;
+    cursor: pointer;
+}
+
+.benefits-specification .spec p {
+    grid-column: 2;
+    font-size: 1.25rem;
+}
+
+/*FOOTER*/
+.footer {
+    max-width: 100%;
+    background: white;
+    margin-top: 2.5rem;
+}
+
+.footer p {
+    font-size: 1.25rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/*RESPONSIVO*/
+
+@media (max-width: 900px) {
+    .benefits-specification {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-specification .benefits {
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .description {
+        grid-template-columns: 1fr;
+    }
+
+    .description .desc {
+        justify-items: start;
+    }
+
+    .description .desc p {
+        text-align: start;
+    }
+
+    .description .desc h1 {
+        padding: 15px 0 0 0;
+    }
+
+    .description::before {
+        top: 3%;
+        width: 100px;
+    }
+}
+
+@media (max-width: 430px) {
+    p {
+        font-size: 18px;
+    }
+    .benefits-specification .benefits {
+        font-size: 1.75rem;
+    }
+}
