@@ -1,6 +1,6 @@
 /*Estilos Gerais*/
 body {
-    background: #f7f7f7;
+    background: var(--color-background-1);
 }
 
 main {
@@ -17,15 +17,32 @@ h1, h3, p, a {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*COLOR VARIABLES*/
+:root {
+    --color-primary: #e21;
+    --color-primary-dark: #900;
+    --color-background-1: #f7f7f7;
+    --color-background-2: #fff;
+    --color-text: #000;
+    --color-benefits: rgba(0, 0, 0, 0.2);
+    --wave: url("../img/onda-clara.svg");
+}
+
+:root {
+    --color-background-1: #111;
+    --color-background-2: #000;
+    --color-text: #fff;
+    --color-benefits: rgba(255, 255, 255, 0.2);
+    --wave: url("../img/onda-escura.svg");
+}
 
 /*HEADER*/
 .header {
     display: grid;
 }
 
-.header h1 {
+.header .logo {
     margin: 3.75rem auto;
-    font-weight: bold;
 }
 
 .header .menu {
@@ -44,19 +61,19 @@ h1, h3, p, a {
     display: inline-block;
     padding: 0.9375rem 1.875rem;
     text-transform: uppercase;
-    background: white;
+    background: var(--color-background-2);
     border-radius: 0.25rem;
-    border: 0.125rem solid white;
+    border: 0.125rem solid var(--color-background-2);
     cursor: pointer;
 }
 
 .header .menu nav ul li:hover {
-    border: 0.125rem solid #900;
+    border: 0.125rem solid var(--color-primary-dark);
 }
 
 .header .menu nav ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     font-weight: bold;
 }
 
@@ -76,13 +93,13 @@ h1, h3, p, a {
     top: 8%;
     right: 50%;
     transform: translateX(50%);
-    background: #ee2211;
+    background: var(--color-primary);
     width: 50px;
     height: 4px;
 }
 
 .description .desc {
-    background: white;
+    background: var(--color-background-2);
     display: grid;
     justify-items: end;
     align-content: center;
@@ -92,11 +109,13 @@ h1, h3, p, a {
 
 .description .desc h1 {
     font-weight: bold;
+    color: var(--color-text);
 }
 
 .description .desc p {
     font-size: 1.25rem;
     text-align: end;
+    color: var(--color-text);
 }
 
 .description .desc button {
@@ -105,13 +124,13 @@ h1, h3, p, a {
     border-radius: 0.25rem;
     text-decoration: none;
     text-transform: uppercase;
-    background: #ee2211;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-text);
     cursor: pointer;
 }
 
 .description .desc button:hover {
-    background: #900;
+    background: var(--color-primary-dark);
 }
 
 .description .image img {
@@ -139,39 +158,45 @@ h1, h3, p, a {
     font-size: 2.625rem;
     text-align: end;
     color: #c6c6c6;
-    background-image: url('/img/onda.svg');
+    background-image: var(--wave);
 }
 
 .benefits-specification .specification {
-    background: white;
+    background: var(--color-background-2);
 }
 
 .benefits-specification .spec {
     display: grid;
     grid-template-columns: 2.5rem 1fr;
-    background: white;
+    background: var(--color-background-2);
     padding: 2.5rem 2.5rem 2.5rem;
 }
 
 .benefits-specification .specification .spec {
-    border-left: 2px solid white;
+    border-left: 2px solid var(--color-background-2);
     
 }
+
 .benefits-specification .specification .spec:hover {
-    background: #f7f7f7;
-    border-left: 2px solid #900;
+    background: var(--color-background-1);
+    border-left: 2px solid var(--color-primary-dark);
     cursor: pointer;
+}
+
+.benefits-specification .spec h3 {
+    color: var(--color-benefits);
 }
 
 .benefits-specification .spec p {
     grid-column: 2;
     font-size: 1.25rem;
+    color: var(--color-text);
 }
 
 /*FOOTER*/
 .footer {
     max-width: 100%;
-    background: white;
+    background: var(--color-background-2);
     margin-top: 2.5rem;
 }
 
@@ -179,6 +204,7 @@ h1, h3, p, a {
     font-size: 1.25rem;
     padding: 2rem;
     text-align: center;
+    color: var(--color-text);
 }
 
 /*RESPONSIVO*/
